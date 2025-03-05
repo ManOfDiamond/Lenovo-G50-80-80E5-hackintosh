@@ -1,6 +1,6 @@
 # Introduction
 
-My personal EFI configuration (OpenCore version 1.0.3) for Lenovo G50-80. Running latest macOS sequoia (15.3.1 at time of writing) with help of OCLP rootpatches. Made from scratch using dortania's opencore guide.
+My personal EFI configuration (OpenCore version 1.0.4) for Lenovo G50-80. Running latest macOS sequoia (15.3.1 at time of writing) with help of OCLP rootpatches. Made from scratch using dortania's opencore guide.
 
 # Specifications
 
@@ -49,15 +49,20 @@ Note 2: Since I have unlocked the bios on my own model, I do not need to use man
 # BIOS Settings
 
 Fast Boot: Can be left on.
+
 Virtualization: ON
+
 Secure Boot: OFF
 
 
 Settings which I would recommend if you have unlocked bios:
 
 In Advanced > Chipset Configuration: 
+
 RTC Lock: OFF,
+
 Board Capability: DeepSx,
+
 DeepSx Power Policies: Enable S3-S4-S5
 
 
