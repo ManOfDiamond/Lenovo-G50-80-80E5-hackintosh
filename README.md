@@ -1,6 +1,6 @@
 # Introduction
 
-My personal EFI configuration (OpenCore version 1.0.4) for Lenovo G50-80. Running latest macOS sequoia (15.3.1 at time of writing) with help of OCLP rootpatches. Made from scratch using dortania's opencore guide.
+My personal EFI configuration (OpenCore version 1.0.4) for Lenovo G50-80. Running latest macOS sequoia (15.4 at time of writing) with help of OCLP rootpatches. Made from scratch using dortania's opencore guide.
 
 # Specifications
 
