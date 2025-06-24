@@ -1,14 +1,14 @@
-# Introduction
+## Introduction
 
-My personal EFI configuration (OpenCore version 1.0.4) for Lenovo G50-80. Running latest macOS sequoia (15.4 at time of writing) with help of OCLP rootpatches. Made from scratch using dortania's opencore guide.
+My personal EFI configuration (OpenCore version 1.0.4) for Lenovo G50-80 80E5. Running latest macOS sequoia (15.5 at time of writing) with help of OCLP rootpatches. Made from scratch using [Dortania](https://github.com/dortania)'s [OpenCore Guide](https://dortania.github.io/OpenCore-Install-Guide) and [5T33Z0](https://github.com/5T33Z0)'s [OC-Little-Translated](https://github.com/5T33Z0/OC-Little-Translated).
 
-# Specifications
+## Specifications
 
 Model: Lenovo G50-80 80E5
 
-CPU: Intel Core i5 5200U
+CPU: Intel® Core™ i5 5200U @ 2.7 GHz Turbo
 
-GPU: Intel HD Graphics 5500
+GPU: Intel® HD Graphics 5500
 
 RAM: SKhynix 4GB + 8GB DDR3L @ 1600mhz
 
@@ -22,18 +22,18 @@ Ethernet: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
 
 Wi-Fi + Bluetooth: Intel AC Wireless 3160
 
-Webcam: Lenovo EasyCamera 720p 
+Webcam: Lenovo EasyCamera HD 720p 
 
 SD Card Reader: Realtek SD Card Reader
 
-# Current Status
+## Current Status
 
 1. Hardware Video Decoding: Fully working
 2. Audio: Fully working
 3. Webcam: Fully working
-4. SD Card Reader: Reader gets detected, SD card doesn't. WIP.
+4. SD Card Reader: Works only if an SD Card is inserted on/before bootup. WIP.
 5. Ethernet: Should work, not tested.
-6. Battery Reporting: Working properly with slight inaccuracy.
+6. Battery Reporting: Working properly.
 7. USB: Fully working, properly mapped.
 8. Wi-Fi: Fully working if used with itlwm. Requires spoofing and root patching if using AirportItlwm.
 9. Bluetooth: Fully working
@@ -42,29 +42,30 @@ SD Card Reader: Realtek SD Card Reader
 12. Sleep and Hibernation: Fully working, even the sleep to hibernation logic. 
 
 
-Note 1: macOS Ventura+ requires root patching for our specific GPU to support Hardware Acceleration.
+Note 1: macOS Ventura+ requires root patching through OCLP for our specific GPU to support Hardware Acceleration.
 
-Note 2: Since I have unlocked the bios on my own model, I do not need to use many "hacks" which would be required otherwise.
+Note 2: Using AirportItlwm on macOS Sequoia requires spoofing and root patching through OCLP. 
 
-# BIOS Settings
+Note 3: Since I have unlocked the bios on my own model, I do not need to use many "hacks" which would be required otherwise.
 
-Fast Boot: Can be left on.
+## BIOS Settings
 
-Virtualization: ON
+* Fast Boot: Can be left on.
 
-Secure Boot: OFF
+* Virtualization: ON
 
-
-Settings which I would recommend if you have unlocked bios:
-
-In Advanced > Chipset Configuration: 
-
-RTC Lock: OFF,
-
-Board Capability: DeepSx,
-
-DeepSx Power Policies: Enable S3-S4-S5
+* Secure Boot: OFF
 
 
-Native ASPM: ON
+Settings which I would recommend if you have unlocked the bios:
 
+* In Advanced > Chipset Configuration:
+
+  * RTC Lock: OFF,
+
+  * Board Capability: DeepSx,
+
+  * DeepSx Power Policies: Enable S3-S4-S5
+
+
+* Native ASPM: ON
